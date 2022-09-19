@@ -13,15 +13,15 @@ public class If01 {
 		if(a>=50) System.out.println(a+"은 50보다 크거나 같다");
 		else System.out.println(a+"은 50보다 작다");
 		System.out.println();
-		
-		System.out.println("깃허브에서 보이시나요?");
-
+	
 		
 		if(true) {
 			if(true) System.out.println("A");
 			else System.out.println("B"); // else는 바로 위 if에 붙는다.
 		}
 			System.out.println("C");
+			System.out.println();
+			
 	}
 
 }
