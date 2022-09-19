@@ -1,0 +1,83 @@
+커리큘럼 설명
+
+----------------------
+자바 2~3주
+----------------------
+Front 단
+
+html / css / javaScript / *bootstrap(css하면 쉽다)
+Ajax / jQuery (비동기)
+ES6 -> React 
+----------------------
+Back 단
+
+DB	- Oracle / MySQL /PostgreSQL
+	- MyBatis 에러가 많아 실습 많이 필요.
+	- JPA
+(AWS엔 Oracle 안올라간다)
+(DB하고싶으면 은행권X)
+----------------------
+Server 단
+
+Spring (실무는 사실상  Spring)
+SpringBoot
+(수업 진도상황에 따라서 하나 탈락 할 수 있음)
+----------------------
+Git
+----------------------
+Project
+
+첫 프로젝트는 강사와 진행.
+추가 프로젝트는 팀원들과 함께 진행.
+
+===============================================
+
+Eclipse EE로 새로 설치하자
+
+1. Java Project : 작업단위
+2. Package : 폴더단위
+3. Class : 파일단위
+
+객체지향 프로그램 -OOP
+(Object Oriented Programming)
+
+★메소드() = 함수
+
+main()함수는 반드시 들어가야한다.
+main을 가지고있는 클래스가 파일명이 된다.
+public 예약어를 가지면 주가 된다고 본다.
+
+*console --> System (자바 제공 콘솔)
+ -입력(키보드) : System.in 
+ -출력(화면) : System.out
+
+*제어문자
+\n = new line
+\t = tab
+
+C언어는 1byte 기준
+java에서는 1자 기준 (uni code 방식)
+
+*상수
+전부 대문자로 기술
+숫자, 문자상수 (ASCii코드)
+	'A'=65,'a'=97	0=0,'0'=48
+-문자열은 ASCii코드값이 없다-> 상수X
+
+-------
+2진수
+8진수
+10진수
+16진수
+------- 계산법 중요
+
+2진수 -> 16진수 
+4개씩 묶어서 계산하면 쉽다.
+
+
+*색
+-빛의 3요소 (R.G.B)
+-4byte (Android에서 흐림에 1byte사용)
+각 255, 0xff
+
+
