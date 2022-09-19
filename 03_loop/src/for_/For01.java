@@ -16,7 +16,7 @@ public class For01 {
 		System.out.println();
 		
 		for(int i='A';i<='Z';i++) {
-			System.out.print((char)(i)+" ");			
+			System.out.print((char)i+" ");			
 		}
 	}	
 }
