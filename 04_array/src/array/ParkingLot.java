@@ -88,4 +88,3 @@ public class ParkingLot {
 //			4위치 : false
 //			5위치 : false
 //			*/
-//		boolean 은 false 로 초기화가 되어있단다.

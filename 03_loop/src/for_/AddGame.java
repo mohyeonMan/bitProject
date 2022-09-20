@@ -9,12 +9,13 @@ public class AddGame {
 		int ch = 2;// 답변기회
 		int num = 0;// 문제번호
 		int correct = 0;
+		
 		while (true) {
 			System.out.println("수학 장학퀴즈. 그런데 이제 쉬운.\n");
 			for (num = 0; num < 5;) {
 				int a = (int) (Math.random() * 79 + 10); // 첫번째 변수
 				int b = (int) (Math.random() * 79 + 10); // 두번째 변수
-				System.out.println(a + b);
+			
 				num++;
 				for (int i = ch - 1; i >= 0; i--) {
 					System.out.print("[" + num + "] " + a + " + " + b + " = ");
