@@ -9,7 +9,7 @@ public class AddGame {
 		int ch = 2;// 답변기회
 		int num = 0;// 문제번호
 		int correct = 0;
-		loop:while (true) {
+		while (true) {
 			System.out.println("수학 장학퀴즈. 그런데 이제 쉬운.\n");
 			for (num = 0; num < 5;) {
 				int a = (int) (Math.random() * 79 + 10); // 첫번째 변수
@@ -40,16 +40,16 @@ public class AddGame {
 				System.out.println(num + "문제중" + correct + "문제 정답.");
 
 			System.out.print("다시 하시겠습니까? (Y/N) : ");
-			for (;;) {
-				String yn = scan.next();
-
-				if (yn.equals("N") || yn.equals("n"))
-					breakloop:;
-				else if (yn.equals("Y") || yn.equals("y"))
+				String yn=scan.next();
+				for (;;) {
+				if (yn.equals("N") || yn.equals("n")||yn.equals("Y") || yn.equals("y"))
 					break; 
 				else
 					System.out.println("똑바로 쓰세요. : ");
-			}
+				 	yn=scan.next();
+				}if(yn.equals("N") || yn.equals("n"))
+					break;
+		
 			System.out.println("******게임 진짜 종료******");
 		}
 	}
