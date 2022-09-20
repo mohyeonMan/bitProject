@@ -45,9 +45,9 @@ public class AddGame {
 				if (yn.equals("N") || yn.equals("n")||yn.equals("Y") || yn.equals("y"))
 					break; 
 				else
-					System.out.println("똑바로 쓰세요. : ");
-				 	yn=scan.next();
-				}if(yn.equals("N") || yn.equals("n"))
+					System.out.print("똑바로 쓰세요. : ");
+				}
+				if(yn.equals("N") || yn.equals("n"))
 					break;
 		
 			System.out.println("******게임 진짜 종료******");
