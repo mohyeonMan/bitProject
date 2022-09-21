@@ -9,13 +9,13 @@ public class AddGame {
 		int ch = 2;// 답변기회
 		int num = 0;// 문제번호
 		int correct = 0;
-		
+
 		while (true) {
 			System.out.println("수학 장학퀴즈. 그런데 이제 쉬운.\n");
 			for (num = 0; num < 5;) {
 				int a = (int) (Math.random() * 79 + 10); // 첫번째 변수
 				int b = (int) (Math.random() * 79 + 10); // 두번째 변수
-			
+
 				num++;
 				for (int i = ch - 1; i >= 0; i--) {
 					System.out.print("[" + num + "] " + a + " + " + b + " = ");
@@ -27,7 +27,7 @@ public class AddGame {
 					} // 정답
 					else {
 						if (i == 0) {
-							System.out.println(ch + "번 안에 맞추지 못하셨습니다.");
+							System.out.println(ch + "번 안에 맞추지 못하셨습니다. 정답은 " + (a + b) + "입니다.");
 						} else {
 							System.out.println("오답. " + i + "번의 기회가 남았습니다.");
 						} // 횟수 고지
@@ -38,20 +38,21 @@ public class AddGame {
 			if (num == correct)
 				System.out.println("만점입니다! 대단하네요.");
 			else
-				System.out.println(num + "문제중" + correct + "문제 정답.");
+				System.out.println(correct + "개 맞았습니다. " + correct * 20 + "점 입니다.");
 
 			System.out.print("다시 하시겠습니까? (Y/N) : ");
-				String yn=scan.next();
-				for (;;) {
-				if (yn.equals("N") || yn.equals("n")||yn.equals("Y") || yn.equals("y"))
-					break; 
-				else
-					System.out.print("똑바로 쓰세요. : ");
-				}
-				if(yn.equals("N") || yn.equals("n"))
+			String answer;
+			for (;;) {
+				String yn = scan.next();
+				if (yn.equals("N") || yn.equals("n") || yn.equals("Y") || yn.equals("y")) {
+					answer = yn;
 					break;
-		
-			System.out.println("******게임 진짜 종료******");
+				} else
+					System.out.print("똑바로 쓰세요. : ");
+			}
+			if (answer.equals("N") || answer.equals("n"))
+				break;
 		}
+		System.out.println("******게임 진짜 종료******");
 	}
 }

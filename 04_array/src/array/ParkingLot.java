@@ -8,21 +8,31 @@ public class ParkingLot {
 
 		Scanner scan = new Scanner(System.in);
 
-		boolean[] lot = new boolean[10];
+		boolean[] lot = new boolean[20]; // 주차공간 생성
+		int Car = 0; // 현재 주차중인 차량
 
-		while (true) {
+		while (true) {// 프로그램 가동
 			System.out.print("	주차관리시스템		\n" + "************************\n" + "	1 . 입차\n" + "	2 . 출차\n"
 					+ "	3 . 리스트\n" + "	4 . 종료\n" + "************************\n" + "		메뉴 : ");
-			int menu = scan.nextInt();
+			int menu = scan.nextInt();// 메뉴선택
+			if ((menu < 1) || (menu > 4)) {
+				System.out.print("   1~4의 값을 입력하세요 : ");
+				menu = scan.nextInt();
+				continue;
+			}
 
-			if (menu == 1) {
+			if (menu == 1) { // 입차메뉴
 				for (;;) {
-
+					if (Car == lot.length) {
+						System.out.println("현재 주차자리가 없습니다.");
+						break;
+					}
 					System.out.print("\n위치 입력 : ");
 					int site = scan.nextInt();
 					if (lot[site - 1] == false) {
 						lot[site - 1] = true;
 						System.out.println(site + "번 자리 주차");
+						Car++;
 						break;
 					} else
 						System.out.println("이미 주차되어있습니다.");
@@ -31,13 +41,19 @@ public class ParkingLot {
 			}
 			System.out.println();
 
-			if (menu == 2) {
+			if (menu == 2) {//출차메뉴
 				for (;;) {
+
+					if (Car == 0) {
+						System.out.println("현재 주차중인 차량이 없습니다.");
+						break;
+					}
 					System.out.print("\n위치 입력 : ");
 					int site = scan.nextInt();
 					if (lot[site - 1] == true) {
 						lot[site - 1] = false;
 						System.out.println((site - 1) + "번 자리에서 출차");
+						Car--;
 						break;
 					} else
 						System.out.println("주차되어있지 않습니다.");
@@ -46,19 +62,26 @@ public class ParkingLot {
 			}
 			System.out.println();
 
-			if (menu == 3) {
-				System.out.println();
-				for (int i = 0; i < 10; i++) {
-					System.out.println((i + 1) + "번 자리\t:\t" + lot[i]);
-				}
-			}
-			System.out.println();
+			if (menu == 3) {//목록출력
 
-			if (menu == 4) {
+				System.out.println();
+				for (int i = 0; i < lot.length; i++) {
+					String a;
+					if (lot[i] == false)
+						a = " ";
+					else
+						a = "주차중";
+					System.out.println((i + 1) + "번 자리\t:\t" + a);
+				}
+				System.out.println("현재 차량수 : " + Car + "대\n");
+			}
+
+			if (menu == 4) {//프로그램 종료
 				break;
 			}
 		}
 		System.out.println("주차관리 프로그램을 종료합니다.");
+		
 	}
 }
 
