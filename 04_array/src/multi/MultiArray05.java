@@ -1,6 +1,63 @@
 package multi;
 
+import java.util.Scanner;
+
 public class MultiArray05 {
+	
+	public static void main(String[] args) {
+		Scanner scan =new Scanner(System.in);
+		int cnt;//인원수
+		int subjectCnt;//과목수
+		int jumsu;//점수
+		
+		
+		// 입력부
+		System.out.print("인원수 : "); // 인원수 입력
+		cnt=scan.nextInt();
+		String[] name= new String[cnt];
+		System.out.println();
+		
+		
+		for(int i=0;i<name.length;i++) { //  인적사항 받아오기 i - 인원수만큼 반복
+			
+			System.out.print("이름입력 : ");
+			name[i]=scan.next();
+			System.out.print("과목수 입력 : ");
+			subjectCnt=scan.nextInt();
+			String[][]subject = new String[name.length][subjectCnt];//과목명
+			for(int j=0;j<subjectCnt;j++) {
+				System.out.print("과목명 입력");
+				subject[name.length][j]=scan.next();
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		// 출력부
+		
+		
+	}
 	
 
 }
