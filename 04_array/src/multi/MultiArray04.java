@@ -1,7 +1,7 @@
 package multi;
 
 public class MultiArray04 {
-	public static void main(String[] args) {
+	public static void main(String[] args) { //나중에 풀어보자
 		//가변길이 다차원배열에서 각 행의 길이가 다를수 있다.
 		int[][]ar =new int[3][];
 		int a=1;
