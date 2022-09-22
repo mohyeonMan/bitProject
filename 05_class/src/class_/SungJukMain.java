@@ -8,11 +8,10 @@ public class SungJukMain {
 		me.setData("박지훈", 90, 80, 70);
 		me.calc();
 		System.out.println("이름\t국어\t영어\t수학\t총점\t평균\t학점");
-		System.out.println(me.getName() + "\t" + me.getKor() + "\t" + me.getEng() + "\t" + me.getMath() + "\t"
-				+ me.getMath() + "\t" + me.getTot() + "\t" + (String.format("%.2f", me.getAvg())));
-
+		me.showInfo();
 	}
 }
+
 /*
 [문제] 성적처리
 클래스명 : SungJuk

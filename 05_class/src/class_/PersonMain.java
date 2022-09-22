@@ -13,7 +13,7 @@ class Person {
 		this.age = age;
 	}
 
-	public String getName() {
+	public String getName() { // 자바는 메서드 하나당 return 하나.
 		return name;
 	}
 

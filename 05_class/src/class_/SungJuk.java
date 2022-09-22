@@ -55,5 +55,8 @@ public class SungJuk {
 	public char getGrade() {
 		return grade;
 	}
-
+	public void showInfo() {
+		System.out.println(getName() + "\t" + getKor() + "\t" + getEng() + "\t" + getMath() + "\t"
+				+ getTot() + "\t" + (String.format("%.2f", getAvg())) + "\t" + getGrade());
+	}
 }

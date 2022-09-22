@@ -16,7 +16,7 @@ public class MultiArray05 {
 		cnt=scan.nextInt();
 		String[] name= new String[cnt];
 		System.out.println();
-		
+		String[][]subject = new String[name.length][];
 		
 		for(int i=0;i<name.length;i++) { //  인적사항 받아오기 i - 인원수만큼 반복
 			
@@ -24,7 +24,7 @@ public class MultiArray05 {
 			name[i]=scan.next();
 			System.out.print("과목수 입력 : ");
 			subjectCnt=scan.nextInt();
-			String[][]subject = new String[name.length][subjectCnt];//과목명
+			subject[i] = String[name.length][subjectCnt];//과목명
 			for(int j=0;j<subjectCnt;j++) {
 				System.out.print("과목명 입력");
 				subject[name.length][j]=scan.next();
