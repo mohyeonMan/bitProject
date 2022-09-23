@@ -57,12 +57,12 @@ public class SungJuk {
 	}
 	public void showInfo() {
 		System.out.println(
-		getName() + "\t" 
-		+ getKor() + "\t" 
-		+ getEng() + "\t"
-		+ getMath() + "\t"
-		+ getTot() + "\t" 
-		+ (String.format("%.2f", getAvg())) + "\t" 
-		+ getGrade());
+				getName() + "\t" 
+						+ getKor() + "\t" 
+						+ getEng() + "\t"
+						+ getMath() + "\t"
+						+ getTot() + "\t" 
+						+ (String.format("%.2f", getAvg())) + "\t" 
+						+ getGrade());
 	}
 }
