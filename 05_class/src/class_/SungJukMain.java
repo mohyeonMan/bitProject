@@ -3,12 +3,22 @@ package class_;
 public class SungJukMain {
 
 	public static void main(String[] args) {
+		System.out.println("이름\t국어\t영어\t수학\t총점\t평균\t학점");
+		
 		SungJuk me = new SungJuk();
-
 		me.setData("박지훈", 90, 80, 70);
 		me.calc();
-		System.out.println("이름\t국어\t영어\t수학\t총점\t평균\t학점");
 		me.showInfo();
+		
+		SungJuk bb = new SungJuk();
+		bb.setData("프로도", 100, 89, 75);
+		bb.calc();
+		bb.showInfo();
+		
+		SungJuk cc = new SungJuk();
+		cc.setData("죠르디", 75, 80, 48);
+		cc.calc();
+		cc.showInfo();
 	}
 }
 
