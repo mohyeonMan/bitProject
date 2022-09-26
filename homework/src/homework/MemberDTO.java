@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MemberDTO {						//Data Transfer Object
 												//데이터 이동 객체
-												//=MemberVO . MemberBean
+												//=MemberVO (value object) . MemberBean
 		private String name;
 		private int age;
 		private String phone;
