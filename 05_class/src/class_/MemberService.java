@@ -77,7 +77,7 @@ public class MemberService { // 일하는 클래스
 		int x = 0;
 		for (int i = 0; i < ar.length; i++) {
 			if (ar[i] != null) {
-				ar[i].showInfo();
+				ar[i].showInfo(); // toString Overriding 도 응용가능.
 			} else {
 				x++;
 				continue;
