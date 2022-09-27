@@ -3,7 +3,7 @@ package abstract_;
 import java.awt.Shape;
 import java.util.Scanner;
 
-class ShapeTest {
+abstract class ShapeTest {
 	protected double area;
 	protected Scanner scan = new Scanner(System.in);
 
@@ -11,13 +11,9 @@ class ShapeTest {
 		System.out.println("ShapeTest 기본생성자");
 	}
 
-	public void calcArea() {
-		System.out.println("도형을 계산합니다");
-	}
+	public abstract void calcArea(); // 하위클래스들이 공동으로 사용해야하나
 
-	public void dispArea() {
-		System.out.println("도형을 출력합니다");
-	}
+	public abstract void dispArea(); // 실질적으로 출력될일 없는 메소드를 추상으로 만든다.
 }
 
 //------------------------------------------------------
