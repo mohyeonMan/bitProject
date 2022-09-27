@@ -1,7 +1,7 @@
 package abstract_;
 
 public abstract class AbstractTest { 	// POJO (Plain Old Java Object)
-	private String name;				// Object 외에 상속이 없는 기본형식.
+	String name;				// Object 외에 상속이 없는 기본형식.
 
 	public String getName() {	// 메서드구현부
 		return name;
