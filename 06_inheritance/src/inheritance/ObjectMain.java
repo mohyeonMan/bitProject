@@ -53,11 +53,11 @@ class Test extends Object{
 	public String toString();	
 }
 class String extends Object{
+	public boolean equals();		문자열비교
 	public String toString();	문자열로 자동으로 Override
 	public int hashCode();		문자열을 10진수로 변환
 								표현할수 있는 문자열은 무한대다.
 								10진수로 다 표현할 수 없다.
-	public String toString();		문자열비교
-	public boolean equals();		
+	public String toString();		
 }
 */
