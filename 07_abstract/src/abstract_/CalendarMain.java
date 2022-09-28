@@ -5,35 +5,49 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class CalendarMain {
+	// 기본생성자로 입력받기
+	// syso 일-토 작성후
+	// calc() 매달 1일의 요일이 무엇인가?
+	// display()이용해서 출력.
 	private int year;
 	private int month;
 	private int week;
 	private int lastday;
-	
+
 	public CalendarMain() {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("년도 입력 : ");
-		year=scan.nextInt();
+		year = scan.nextInt();
 		System.out.print("월 입력 : ");
-		month=scan.nextInt();		
+		month = scan.nextInt();
 	}
-	
+
 	public void calc() {
-		Calendar cal =Calendar.getInstance(); //추상클래스.
-		cal.set(year,month-1,1);
-		week=cal.get(Calendar.DAY_OF_WEEK);
-		lastday=cal.getActualMaximum(month);
+		Calendar cal = Calendar.getInstance(); // 추상클래스.
+		cal.set(year, month - 1, 1);
+		week = cal.get(Calendar.DAY_OF_WEEK);
+		lastday = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 	}
-	
-	public void disp() {}
+
+	public void disp() {
+
+		System.out.println("\n일\t월\t화\t수\t목\t금\t토");
+		for (int i = 1; i < week; i++) {
+			System.out.print("\t");
+		}
+		for (int i = 1; i <= lastday; i++) {
+			System.out.print(i + "\t");
+			if (week % 7 == 0)
+				System.out.println();
+			week++;
+		}
+	}
 
 	public static void main(String[] args) {
-		// 기본생성자로 입력받기
-		// syso 일-토 작성후
-		// calc() 매달 1일의 요일이 무엇인가?
-		// display()이용해서 출력.
 		CalendarMain calendarMain = new CalendarMain();
-System.out.println(calendarMain.week);
+		calendarMain.calc();
+		calendarMain.disp();
+
 	}
 }
 /*
