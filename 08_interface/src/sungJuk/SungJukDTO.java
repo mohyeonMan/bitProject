@@ -62,7 +62,10 @@ public class SungJukDTO {
 	public void showInfo() {
 		System.out.println(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg);
 	}
-	
-	
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
 
 }
