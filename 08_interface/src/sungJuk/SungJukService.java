@@ -35,6 +35,8 @@ public class SungJukService {
 					sungJuk = new SungJukUpdate();
 				else if (a == 4)
 					sungJuk = new SungJukDelete();
+				else if (a == 5)
+					sungJuk = new SungJukSort();
 				else {
 					System.out.println("\n다시 입력하세요.\n");
 					continue;

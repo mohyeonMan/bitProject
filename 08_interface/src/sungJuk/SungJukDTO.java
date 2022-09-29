@@ -2,7 +2,7 @@ package sungJuk;
 
 import java.util.Scanner;
 
-public class SungJukDTO {
+public class SungJukDTO implements Comparable<SungJukDTO>{
 	// 필드 private - 번호 (중복x), 이름 , 국어 영어 수학 총점 평균;
 	// 생성자,setter,getter
 
@@ -66,6 +66,15 @@ public class SungJukDTO {
 	public String getName() {
 		// TODO Auto-generated method stub
 		return name;
+	}
+
+	@Override
+	public int compareTo(SungJukDTO o) {
+		if (this.tot > o.tot)
+			return -1;
+		else if (this.tot < o.tot)
+			return 1;		
+		return 0;
 	}
 
 }
