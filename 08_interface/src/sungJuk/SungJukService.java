@@ -14,16 +14,18 @@ public class SungJukService {
 			Scanner scan = new Scanner(System.in);
 			System.out.println(
 					"************************\n"
-				+		"*\t1. insert\n"
-				+		"*\t2. list\n"
-				+		"*\t3. update\n"
-				+		"*\t4. 끝내기\n"
+				+		"*\t1. 입력\n"
+				+		"*\t2. 출력\n"
+				+		"*\t3. 수정\n"
+				+		"*\t4. 삭제\n"
+				+		"*\t5. 정렬\n"
+				+		"*\t6. 종료\n"
 				+	"************************");
 
 				System.out.print("\t\t메뉴 : ");
 				a = scan.nextInt();
 
-				if (a == 4)
+				if (a == 6)
 					break;
 				else if (a == 1)
 					sungJuk = new SungJukInsert();
@@ -31,7 +33,10 @@ public class SungJukService {
 					sungJuk = new SungJukList();
 				else if (a == 3)
 					sungJuk = new SungJukUpdate();
-
+				else {
+					System.out.println("\n다시 입력하세요.\n");
+					continue;
+				}
 				sungJuk.execute(list);
 			}
 

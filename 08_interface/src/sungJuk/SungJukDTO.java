@@ -14,11 +14,11 @@ public class SungJukDTO {
 
 	private int num; // 번호
 	private String name; // 이름
-	private int kor;
-	private int eng;
-	private int mat;
-	private int tot;
-	private double avg;
+	private int kor; // 국어
+	private int eng; // 영어
+	private int mat; // 수학
+	private int tot; // 총합
+	private double avg;// 평균
 
 	public SungJukDTO() {
 		Scanner scan = new Scanner(System.in);
@@ -62,5 +62,7 @@ public class SungJukDTO {
 	public void showInfo() {
 		System.out.println(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg);
 	}
+	
+	
 
 }
