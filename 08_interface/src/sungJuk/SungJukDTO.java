@@ -73,7 +73,7 @@ public class SungJukDTO implements Comparable<SungJukDTO>{
 		if (this.tot > o.tot)
 			return -1;
 		else if (this.tot < o.tot)
-			return 1;		
+			return 1;
 		return 0;
 	}
 
