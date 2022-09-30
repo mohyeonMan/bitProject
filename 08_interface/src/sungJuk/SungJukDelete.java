@@ -18,14 +18,14 @@ public class SungJukDelete implements SungJuk {
 					System.out.println("\n삭제할 이름이 없습니다.\n");
 					break;
 				}
-			}
-			else if(name.equals(list.get(i).getName())) {
+			} else if (name.equals(list.get(i).getName())) {
 				list.remove(i);
 				i--;
 				cnt--;
 			}
 		}
-		if(cnt<list.size())System.out.println("\n모든 데이터 삭제했습니다.\n");
+		if (cnt < list.size())
+			System.out.println("\n모든 데이터 삭제했습니다.\n");
 	}
 }
 
