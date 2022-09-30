@@ -27,7 +27,7 @@ public class SungJukService {
 
 				if (a == 6)
 					break;
-				else if (a == 1)
+				if (a == 1)
 					sungJuk = new SungJukInsert();
 				else if (a == 2)
 					sungJuk = new SungJukList();
@@ -46,4 +46,4 @@ public class SungJukService {
 
 		}
 
-	}
+}

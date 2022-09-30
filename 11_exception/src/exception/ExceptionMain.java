@@ -10,7 +10,7 @@ public class ExceptionMain {
 		}
 		System.out.println();
 
-		try {
+		try {	//에러를 잡을 범위
 			int num = Integer.parseInt(args[0]);
 
 			Scanner scan = new Scanner(System.in);
@@ -20,6 +20,12 @@ public class ExceptionMain {
 			System.out.println(num + " / " + num2 + " = " + (num / num2));
 		} catch (NumberFormatException e) {
 			System.out.println("반드시 숫자만 가능합니다.");
+			e.printStackTrace(); // 에러의 상세설명 추가.
+		} catch (ArithmeticException e) {
+			System.out.println("0으로 나눌 수 없습니다.");
+			e.printStackTrace(); 
+		} finally {	//에러가 있던 없던 실행.
+			System.out.println("에러가 있어도 실행합니다~");
 		}
 	}
 }

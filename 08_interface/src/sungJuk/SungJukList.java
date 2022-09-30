@@ -11,7 +11,7 @@ public class SungJukList implements SungJuk{
 		for(int i = 0; i < list.size(); i++) {
 			list.get(i).showInfo();
 		}
-		System.out.println("\n\n");
+		System.out.println("\n");
 	}
 
 }

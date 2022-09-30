@@ -1,6 +1,7 @@
 package sungJuk;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class SungJukDelete implements SungJuk {
@@ -8,23 +9,29 @@ public class SungJukDelete implements SungJuk {
 	@Override
 	public void execute(ArrayList<SungJukDTO> list) {
 		System.out.print("\n삭제할 이름을 입력 : ");
-		int cnt = 0;
 		Scanner scan = new Scanner(System.in);
 		String name = scan.next();
-		for (int i = 0; i < list.size(); i++) {
-			if (!name.equals(list.get(i).getName())) {
+
+		int cnt = 0;
+
+//		for (int i = 0; i < list.size(); i++) {
+//			if (name.equals(list.get(i).getName())) {
+//				list.remove(i);
+//				i--;
+//				cnt++;
+//			}
+//		}
+		Iterator<SungJukDTO> it = list.iterator();
+		while (it.hasNext()) {
+			SungJukDTO sungJukDTO = it.next();
+			if (sungJukDTO.getName().equals(name)) {
+				it.remove(); // it.remove() 는 반드시 it.next()가 반환하는 데이터항목을 지운다.
 				cnt++;
-				if (cnt == list.size()) {
-					System.out.println("\n삭제할 이름이 없습니다.\n");
-					break;
-				}
-			} else if (name.equals(list.get(i).getName())) {
-				list.remove(i);
-				i--;
-				cnt--;
 			}
 		}
-		if (cnt < list.size())
+		if (cnt == 0) {
+			System.out.println("\n삭제할 이름이 없습니다.\n");
+		} else
 			System.out.println("\n모든 데이터 삭제했습니다.\n");
 	}
 }
